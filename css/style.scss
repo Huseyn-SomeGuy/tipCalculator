@@ -1,0 +1,296 @@
+/*Reseting*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*=========================================================================================================*/
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+/*font-family: 'Space Mono', monospace;*/
+/*=========================================================================================================*/
+/*  Colors 
+- Strong cyan: hsl(172, 67%, 45%)
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+*/
+
+/*=========================================================================================================*/
+  /*Variables*/
+$Strong-cyan: hsl(172, 67%, 45%);
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan-01: hsl(186, 14%, 43%);
+$Dark-grayish-cyan-02: hsl(184, 14%, 56%);
+$Light-grayish-cyan-01: hsl(185, 41%, 84%);
+$Light-grayish-cyan-02: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+/*=========================================================================================================*/
+
+:root{
+   font-size: 15px;
+   font-family: 'Space Mono', monospace;
+}
+
+.wrapper {
+   height: 100vh;
+   overflow: hidden;
+   background-color: $Light-grayish-cyan-01;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content {
+
+		&__header {
+         text-align: center;
+         margin: 2rem 0;
+         letter-spacing: .4rem;
+         line-height: 2rem;
+         color: $Dark-grayish-cyan-01;
+         font-weight: bold;
+         text-transform: uppercase;
+         font-size: 1.5rem;
+		}
+
+		&__body {
+		   background-color: #fff;
+         border-radius: 20px;
+         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+         padding: 1.6rem;
+      }
+
+		&__price {
+         background-color: $Very-dark-cyan;
+         border-radius: 10px;
+         padding: 1.5rem;
+		}
+      &__tip{
+         margin-bottom: 1.5rem;
+         display: flex;
+         justify-content: space-between;
+         align-content: center;
+      }
+      &__total{
+         margin-bottom: 1.5rem;
+         display: flex;
+         justify-content: space-between;
+         align-content: center;
+      }
+      &__tip--text{
+         p{
+            color: $White;
+            margin-bottom: .3rem;
+         }
+         span{
+            color: $Dark-grayish-cyan-02;
+            font-size: 13;
+         }
+      }
+		&__total--text{
+         p{
+            color: $White;
+            margin-bottom: .3rem;
+         }
+         span{
+            color: $Dark-grayish-cyan-02;
+            font-size: 13;
+         }
+		}
+}
+.bill {
+
+		&__amount {
+         margin-bottom: 2rem;
+
+         p{
+            font-weight: bold;
+            font-size: 13px;
+            color: $Dark-grayish-cyan-01;
+            margin-bottom: .4rem;
+         }
+
+         input{
+            background-color: $Light-grayish-cyan-02;
+            color: $Very-dark-cyan;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 4px;
+            text-align: right;
+            padding: .3rem;
+            font-size: 20px;
+            border: 2px solid $Light-grayish-cyan-02; 
+         }
+         input:focus{
+            border: 2px solid $Strong-cyan;
+         }
+		}
+
+		&__percentage {
+         margin-bottom: 2rem;
+         p{
+            font-weight: bold;
+            color: $Dark-grayish-cyan-01;
+            font-size: 13px;
+            margin-bottom: 1rem;
+         }
+		}
+
+		&__percentage--container {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 1rem;
+		}
+
+		&__percentages {
+         background-color: $Very-dark-cyan;
+         color: #fff;
+         padding: .5rem;
+         border-radius: 5px;
+         font-weight: bold;
+         text-align: center;
+		}
+      &__percentages.active{
+         background-color: $Strong-cyan;
+         color: $Very-dark-cyan;
+      }
+
+		&__custom-percentage {
+         background-color: $Light-grayish-cyan-02;
+         color: $Dark-grayish-cyan-01;
+         border: 2px solid $Light-grayish-cyan-02;
+         border-radius: 5px;
+         width: 100%;
+         font-weight: bold;
+         text-align: right;
+         padding: .5rem;
+		}
+      &__custom-percentage:focus{
+         border: 2px solid $Strong-cyan;
+      }
+
+		&__number-people {
+         margin-bottom: 2rem;
+         p{
+            font-weight: bold;
+            font-size: 13px;
+            color: $Dark-grayish-cyan-01;
+            margin-bottom: .4rem;
+         }
+         input{
+            background-color: $Light-grayish-cyan-02;
+            color: $Very-dark-cyan;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 4px;
+            text-align: right;
+            padding: .3rem;
+            font-size: 20px;
+            border: 2px solid $Light-grayish-cyan-02; 
+         }
+         input:focus{
+            border: 2px solid $Strong-cyan;
+         }
+		}
+}
+.amount{
+   font-size: 25px;
+   font-weight: bold;
+   color: $Strong-cyan;
+}
+.reset {
+   width: 100%;
+   padding: .5rem 0;
+   border-radius: 5px;
+   background-color: $Strong-cyan;
+   color: $Very-dark-cyan;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 18px;
+}
+
+.reset:active{
+   background-color: $Light-grayish-cyan-01;
+}
+
+.input-area{
+   position: relative;
+}
+.fas{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   margin-left: 1rem;
+   color: $Dark-grayish-cyan-02;
+}
+.error{
+   position: absolute;
+   top: -20px;
+   right: 0;
+   color: red;
+   font-weight: bold;
+}
+
+@media(min-width: 768px){
+   .content{
+      min-width: 800px;
+   }
+   .content__body{
+      display: flex;
+      justify-content: space-between;
+   }
+   .content__bill{
+      flex: 0 0 50%;
+      padding: .5rem 2rem 0.5rem .5rem;
+   }
+   .content__price{
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+   }
+   .bill__percentage--container{
+      grid-template-columns: repeat(3, 1fr);
+   }
+   .reset{
+      margin-top: auto;
+   }
+   .amount{
+      font-size:40px;
+   }
+}

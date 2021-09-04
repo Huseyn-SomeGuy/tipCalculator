@@ -1,0 +1,363 @@
+/*Reseting*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*=========================================================================================================*/
+/*Fonts*/
+/*font-family: 'Space Mono', monospace;*/
+/*=========================================================================================================*/
+/*  Colors 
+- Strong cyan: hsl(172, 67%, 45%)
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+*/
+/*=========================================================================================================*/
+/*Variables*/
+/*=========================================================================================================*/
+:root {
+  font-size: 15px;
+  font-family: 'Space Mono', monospace;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__header {
+  text-align: center;
+  margin: 2rem 0;
+  letter-spacing: .4rem;
+  line-height: 2rem;
+  color: #5e7a7d;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.content__body {
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.6rem;
+}
+
+.content__price {
+  background-color: #00494d;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.content__tip {
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content__total {
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content__tip--text p {
+  color: white;
+  margin-bottom: .3rem;
+}
+
+.content__tip--text span {
+  color: #7f9c9f;
+  font-size: 13;
+}
+
+.content__total--text p {
+  color: white;
+  margin-bottom: .3rem;
+}
+
+.content__total--text span {
+  color: #7f9c9f;
+  font-size: 13;
+}
+
+.bill__amount {
+  margin-bottom: 2rem;
+}
+
+.bill__amount p {
+  font-weight: bold;
+  font-size: 13px;
+  color: #5e7a7d;
+  margin-bottom: .4rem;
+}
+
+.bill__amount input {
+  background-color: #f4fafa;
+  color: #00494d;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: right;
+  padding: .3rem;
+  font-size: 20px;
+  border: 2px solid #f4fafa;
+}
+
+.bill__amount input:focus {
+  border: 2px solid #26c0ab;
+}
+
+.bill__percentage {
+  margin-bottom: 2rem;
+}
+
+.bill__percentage p {
+  font-weight: bold;
+  color: #5e7a7d;
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+
+.bill__percentage--container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.bill__percentages {
+  background-color: #00494d;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bill__percentages.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.bill__custom-percentage {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  border: 2px solid #f4fafa;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  text-align: right;
+  padding: .5rem;
+}
+
+.bill__custom-percentage:focus {
+  border: 2px solid #26c0ab;
+}
+
+.bill__number-people {
+  margin-bottom: 2rem;
+}
+
+.bill__number-people p {
+  font-weight: bold;
+  font-size: 13px;
+  color: #5e7a7d;
+  margin-bottom: .4rem;
+}
+
+.bill__number-people input {
+  background-color: #f4fafa;
+  color: #00494d;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: right;
+  padding: .3rem;
+  font-size: 20px;
+  border: 2px solid #f4fafa;
+}
+
+.bill__number-people input:focus {
+  border: 2px solid #26c0ab;
+}
+
+.amount {
+  font-size: 25px;
+  font-weight: bold;
+  color: #26c0ab;
+}
+
+.reset {
+  width: 100%;
+  padding: .5rem 0;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.reset:active {
+  background-color: #c5e4e7;
+}
+
+.input-area {
+  position: relative;
+}
+
+.fas {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 1rem;
+  color: #7f9c9f;
+}
+
+.error {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  color: red;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .content {
+    min-width: 800px;
+  }
+  .content__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .content__bill {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: .5rem 2rem 0.5rem .5rem;
+  }
+  .content__price {
+    width: 100%;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bill__percentage--container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .reset {
+    margin-top: auto;
+  }
+  .amount {
+    font-size: 40px;
+  }
+}

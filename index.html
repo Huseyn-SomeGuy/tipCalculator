@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <!-- css conection -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- java script connection -->
+   <script src="js/script.js" defer></script>
+   <meta http-equiv="Content-type" Content="text/html;charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FontAwsome-un qoşulma linki -->
+   <script src="https://kit.fontawesome.com/f3ac8151f3.js" crossorigin="anonymous"></script>
+   <!-- Əgər frontendmentor projectləri ilə işləsəm İconu işə salmalıyam -->
+   <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+   <title>Tip calculator</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="content">
+         <div class="content__header">spli<br>tter</div>
+         <div class="content__body">
+            <div class="content__bill bill">
+               <div class="bill__amount">
+                  <p>Bill</p>
+                  <div class="input-area">
+                     <i class="fas fa-dollar-sign"></i>
+                     <span class="bill-error error"></span>
+                     <input id="bill" placeholder="0" type="text">
+                  </div>
+               </div>
+               <div class="bill__percentage">
+                  <p>Select Tip %</p>
+                  <div class="bill__percentage--container">
+                     <button class="bill__percentages">5%</button>
+                     <button class="bill__percentages">10%</button>
+                     <button class="bill__percentages">15%</button>
+                     <button class="bill__percentages">25%</button>
+                     <button class="bill__percentages">50%</button>
+                     <input id="custom" type="text" placeholder="Custom" class="bill__custom-percentage">
+                  </div>
+               </div>
+               <div class="bill__number-people">
+                  <p>Number of People</p>
+                  <div class="input-area">
+                     <i class="fas fa-user"></i>
+                     <span class="num-error error"></span>
+                     <input id="plpNum" placeholder="0" type="text">
+                  </div>
+               </div>
+            </div>
+            <div class="content__price">
+               <div class="content__tip">
+                  <div class="content__tip--text">
+                     <p>Tip Amount </p>
+                     <span>/ person</span>
+                  </div>
+                  <p class="tip--amount amount">$0.00</p>
+               </div>
+               <div class="content__total">
+                  <div class="content__total--text">
+                     <p>Total</p>
+                     <span>/ person</span>
+                  </div>
+                  <p class="total--amount amount">$0.00</p>
+               </div>
+               <button class="reset">reset</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
